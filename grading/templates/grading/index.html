@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SMR Cosmetic Grading Tool</title>
+</head>
+<body>
+    <h1>SMR Cosmetic Grading Tool</h1>
+    {% if test_list %}
+    <ul>
+        {% for test in test_list %}
+            <li><a href="{% url 'grading:question' test_id=test.id pk=test.first_question.id %}">{{ test.title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No tests are available.</p>
+    {% endif %}
+</body>
+</html>
