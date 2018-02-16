@@ -7,3 +7,6 @@ Download and install **[Docker for Mac or Windows](https://www.docker.com/produc
 Run in this directory:
 
     $ docker-compose up
+
+Point your browser to [http://localhost:8000/](http://localhost:8000/)
+
