@@ -32,7 +32,7 @@ def submit(request, test_id, question_id):
     # save response to session
     request.session['test' + str(question.test.id)][str(question.id)] = str(selected_choice.id)
     # attempt to get followup (child) question
-    followup_question = Question.objects.filter(parent=selected_choice).first()
+    followup_question = selected_choice.followup_question()
     if followup_question is not None:
       return HttpResponseRedirect(reverse('grading:question', args=(question.test.id, followup_question.id,)))
     elif question.next_question() is not None:
