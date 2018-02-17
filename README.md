@@ -30,3 +30,7 @@ Next, create a user who can login to the admin site:
 Login to the admin site with your new superuser at [http://localhost:8000/admin](http://localhost:8000/admin) and create a few Tests, Questions, and Choices.
 
 Finally, navigate to [http://localhost:8000/grading](http://localhost:8000/grading) to demo the Cosmestic Grading service.
+
+Optional: run the tests:
+
+    $ docker-compose exec web python3 manage.py test grading
